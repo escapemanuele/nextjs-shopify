@@ -8,10 +8,7 @@ import FeaturedProducts from "../components/Home/FeaturedProducts";
 import FrontPageCategories from "../components/Home/FrontPageCategories";
 import NoContainerLayout from "../components/Structure/Layouts/NoContainerLayout";
 import { manageProducts } from "../graphql-shopify/product/functions";
-import {
-  getPrismaClient,
-  createShopifyGraphql,
-} from "../graphql-shopify/context";
+import { createShopifyGraphql } from "../graphql-shopify/context";
 import QUERY_GET_PRODUCTS, {
   GetAllProductsQueryType,
 } from "../graphql-shopify/product/queries/QUERY_GET_PRODUCTS";
@@ -22,26 +19,19 @@ import QUERY_GET_COLLECTIONS, {
 import { categoriesFromPrisma } from "../graphql-shopify/category/functions";
 import { Collection } from "../generated/shopify.model";
 import { NexusGenObjects } from "../generated/nexus-typegen";
+import { manageCollectionConnection } from "../graphql-shopify/category/functions/manage-collection";
 
 const Home = ({
   products,
   categories,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  console.log("PRODUCTRS", products);
+  console.log("categories", categories);
+
   return (
     <>
-      <Parallax image="/images/la-mosca-nera.jpg">
-        <ContainerWrapper>
-          {/* <Button
-            color="success"
-            href="https://www.youtube.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            size="xl"
-          >
-            <i className="fas fa-play" />
-            Ripara/modifica i tuoi abiti
-          </Button> */}
-        </ContainerWrapper>
+      <Parallax image="/images/fantasy-land.jpg">
+        <ContainerWrapper></ContainerWrapper>
       </Parallax>
       <MainRaisedWrapper>
         <ContainerWrapper>
@@ -57,37 +47,24 @@ const Home = ({
 
 export async function getStaticProps() {
   const graphqlClient = createShopifyGraphql();
-  const prismaClient = getPrismaClient();
 
+  let featuredProducts: Array<NexusGenObjects["Product"]> = [];
   const productsData = await graphqlClient.request<GetAllProductsQueryType>(
     QUERY_GET_PRODUCTS,
     {
       query: "tag:featured",
     }
   );
+  featuredProducts = await manageProducts(productsData.products);
 
-  const featuredProducts = await manageProducts(productsData.products);
+  const collectionsData = await graphqlClient.request<QueryGetCollectionsType>(
+    QUERY_GET_COLLECTIONS,
+    { first: 250 }
+  );
 
-  let frontCategories: Array<NexusGenObjects["Category"]> = [];
-
-  const prismaFrontCategories = await prismaClient.category.findMany({
-    where: { front: true },
-  });
-
-  if (prismaFrontCategories.length > 0) {
-    const collectionsData = await graphqlClient.request<
-      QueryGetCollectionsType
-    >(QUERY_GET_COLLECTIONS, { first: 250 });
-    let shopifyCollections: Collection[] = [];
-    if (collectionsData?.collections?.edges?.length) {
-      shopifyCollections = collectionsData.collections.edges.map((x) => x.node);
-    }
-
-    frontCategories = categoriesFromPrisma(
-      prismaFrontCategories,
-      shopifyCollections
-    );
-  }
+  let frontCategories: Array<NexusGenObjects["Category"]> = await manageCollectionConnection(
+    collectionsData.collections
+  );
 
   return {
     props: {

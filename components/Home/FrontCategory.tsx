@@ -11,16 +11,20 @@ interface FrontCategoryProp {
 }
 
 const FrontCategory: React.FC<FrontCategoryProp> = ({ category }) => {
+  console.log("CATEGORY", category);
+
   return (
     <Link href={SHOPCATEGORY} as={category.handle}>
       <FrontCategoryWrapper>
         <div className="imageContainer">
-          <Image
-            src={category.image}
-            layout="fill"
-            className="img"
-            alt={category.title}
-          />
+          {category.image && (
+            <Image
+              src={category.image}
+              layout="fill"
+              className="img"
+              alt={category.title}
+            />
+          )}
           <h3 className="title">{category.title}</h3>
           <p className="description">{category.description}</p>
         </div>

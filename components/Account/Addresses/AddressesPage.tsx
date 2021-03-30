@@ -7,9 +7,9 @@ import AddressesList from "./AddressesList";
 const AddressesPage = () => (
   <>
     <Head>
-      <title>Indirizzi | La Mosca Nera</title>
+      <title>Addresses | Shopify Store</title>
     </Head>
-    <PageTitle>I miei indirizzi</PageTitle>
+    <PageTitle>My addresses</PageTitle>
     <AddressesList />
   </>
 );

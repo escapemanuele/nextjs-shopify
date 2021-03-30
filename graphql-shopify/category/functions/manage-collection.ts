@@ -12,10 +12,12 @@ export const manageCollection = async (collection: Collection): Promise<NexusGen
         description: collection.description,
     };
 
-    category.products = await manageProducts(collection.products)
+    if (collection?.products?.edges.length) {
+        category.products = await manageProducts(collection?.products)
+    }
     return category
 }
 
 export const manageCollectionConnection = async (collectionConn: CollectionConnection): Promise<Array<NexusGenObjects["Category"]>> => {
-    return await Promise.all(collectionConn.edges.map(async ({ node }) => await manageCollection(node)));
+    return await Promise.all(collectionConn?.edges?.map(async ({ node }) => await manageCollection(node)));
 }

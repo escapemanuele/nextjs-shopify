@@ -7,7 +7,7 @@ const Footer = () => (
   <FooterWrapper>
     <div className="footer-container">
       <Link href="/" as="/">
-        <img className="logo" src="/favicon.png" alt="La Mosca Nera logo" />
+        <img className="logo" src="/favicon.png" alt="@escapemanuele Shopify Store logo" />
       </Link>
     </div>
   </FooterWrapper>

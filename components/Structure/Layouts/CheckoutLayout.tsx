@@ -12,7 +12,7 @@ import Meta from "../Meta";
 
 const CheckoutLayout = (props) => (
   <StyledPage>
-    <Header brand="La Mosca Nera" color="white" />
+    <Header brand="Escapemanuele Store" color="white" />
     <Meta />
     <div>
       <Parallax xsmall image={require("public/images/profile-bg.jpg")} />

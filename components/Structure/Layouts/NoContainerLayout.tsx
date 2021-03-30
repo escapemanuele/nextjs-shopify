@@ -10,7 +10,7 @@ import FooterContainer from "../Footer/FooterContainer";
 const NoContainerLayout = (props) => (
   <>
     <Header
-      brand="La Mosca Nera"
+      brand="Escapemanuele Store"
       rightLinks={<HeaderLinks />}
       mobileLinks={<HeaderMobileLinks />}
       fixed

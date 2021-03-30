@@ -11,9 +11,9 @@ const OrdersPage = () => {
   return (
     <>
       <Head>
-        <title>Ordini | La Mosca Nera</title>
+        <title>Orders | Shopify Store</title>
       </Head>
-      <PageTitle>I miei ordini</PageTitle>
+      <PageTitle>My Orders</PageTitle>
       {!data || loading ? (
         <BouncingLoader />
       ) : (

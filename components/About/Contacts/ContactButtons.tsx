@@ -1,22 +1,22 @@
 import React from "react";
 import { Button, styles } from "../../utils";
-import styled from "styled-components";
+import styled from "styled-components"
 
 const ContactsButtons = () => {
   return (
     <ContactsButtonsWrapper>
       <ContactsItem>
-        <div>CHIAMAMI</div>
+        <div>CALL ME</div>
         <Button title="Chiamami sul telefono" href="tel:+393515595121">
           <i className="socialIcons fa fa-phone" aria-hidden="true"></i>
-          CHIAMA
+          CALL
         </Button>
       </ContactsItem>
       <ContactsItem>
-        <div>SCRIVIMI SU INSTAGRAM</div>
+        <div>WRITE ME ON INSTAGRAM</div>
         <Button
-          title="Scrivmi su instagram!"
-          href="https://www.instagram.com/la.moscanera/"
+          title="Write me on Instagram!"
+          href="https://www.instagram.com/"
           target="_blank"
           color="instagram"
         >
@@ -25,15 +25,15 @@ const ContactsButtons = () => {
         </Button>
       </ContactsItem>
       <ContactsItem>
-        <div>SCRIVIMI SU WHATSAPP</div>
+        <div>WRITE ME ON WHATSAPP</div>
         <Button
           color="whatsapp"
           target="_blank"
           title="Scrivimi su whatsapp!"
-          href="https://web.whatsapp.com/send?phone=+393515595121&amp;text=Ciao! Avrei un lavoro da farti fare!"
+          href="https://web.whatsapp.com/send?phone=XXX&amp;text=Hi! I have a job for you!"
         >
           <i className="socialIcons fab fa-whatsapp" />
-          SCRIVIMI
+          WRITE ME
         </Button>
       </ContactsItem>
     </ContactsButtonsWrapper>

@@ -4,36 +4,36 @@ import Link from "next/link";
 
 import { ListWrapper, ListItemWrapper } from "./HeaderLinksStyle";
 import * as ROUTES from "../../../constants/routes";
-import { ALTERATIONS, REPAIRS, SHOP } from "../../../constants/categories";
+import { FPS, GRAPH, RTS } from "../../../constants/categories";
 
 function HeaderMobileLinks() {
   const router = useRouter();
 
-  const isActiveLink = slug => router.asPath.indexOf(slug) !== -1;
+  const isActiveLink = (slug) => router.asPath.indexOf(slug) !== -1;
 
   return (
     <ListWrapper>
-      <ListItemWrapper active={isActiveLink(REPAIRS.SLUG)}>
-        <Link href={ROUTES.SHOPCATEGORY} as={REPAIRS.SLUG}>
+      <ListItemWrapper active={isActiveLink(FPS.SLUG)}>
+        <Link href={ROUTES.SHOPCATEGORY} as={FPS.SLUG}>
           <a className="navLink">
             {/* <i className={`socialIcons ${REPAIRS.ICONCLASS}`} /> */}
-            {REPAIRS.TITLE}
+            {FPS.TITLE}
           </a>
         </Link>
       </ListItemWrapper>
-      <ListItemWrapper active={isActiveLink(ALTERATIONS.SLUG)}>
-        <Link href={ROUTES.SHOPCATEGORY} as={ALTERATIONS.SLUG}>
+      <ListItemWrapper active={isActiveLink(GRAPH.SLUG)}>
+        <Link href={ROUTES.SHOPCATEGORY} as={GRAPH.SLUG}>
           <a className="navLink">
             {/* <i className={`socialIcons ${ALTERATIONS.ICONCLASS}`} /> */}
-            {ALTERATIONS.TITLE}
+            {GRAPH.TITLE}
           </a>
         </Link>
       </ListItemWrapper>
-      <ListItemWrapper active={isActiveLink(SHOP.SLUG)}>
-        <Link href={ROUTES.SHOPCATEGORY} as={SHOP.SLUG}>
+      <ListItemWrapper active={isActiveLink(RTS.SLUG)}>
+        <Link href={ROUTES.SHOPCATEGORY} as={RTS.SLUG}>
           <a className="navLink">
             {/* <i className={`socialIcons ${SHOP.ICONCLASS}`} /> */}
-            {SHOP.TITLE}
+            {RTS.TITLE}
           </a>
         </Link>
       </ListItemWrapper>

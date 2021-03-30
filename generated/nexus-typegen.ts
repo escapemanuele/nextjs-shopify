@@ -74,7 +74,7 @@ export interface NexusGenObjects {
   Category: { // root type
     description?: string | null; // String
     handle?: string | null; // String
-    id: string; // String!
+    id?: string | null; // String
     image?: string | null; // String
     products?: Array<NexusGenRootTypes['Product'] | null> | null; // [Product]
     title?: string | null; // String
@@ -106,7 +106,7 @@ export interface NexusGenObjects {
     categoryHandle?: string | null; // String
     description?: string | null; // String
     handle?: string | null; // String
-    id: string; // String!
+    id?: string | null; // String
     image?: NexusGenRootTypes['ProductImage'] | null; // ProductImage
     price?: number | null; // Float
     title?: string | null; // String
@@ -172,7 +172,7 @@ export interface NexusGenFieldTypes {
   Category: { // field return type
     description: string | null; // String
     handle: string | null; // String
-    id: string; // String!
+    id: string | null; // String
     image: string | null; // String
     products: Array<NexusGenRootTypes['Product'] | null> | null; // [Product]
     title: string | null; // String
@@ -212,7 +212,7 @@ export interface NexusGenFieldTypes {
     categoryHandle: string | null; // String
     description: string | null; // String
     handle: string | null; // String
-    id: string; // String!
+    id: string | null; // String
     image: NexusGenRootTypes['ProductImage'] | null; // ProductImage
     price: number | null; // Float
     title: string | null; // String

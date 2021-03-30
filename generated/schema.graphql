@@ -36,7 +36,7 @@ type CartItem {
 type Category {
   description: String
   handle: String
-  id: String!
+  id: String
   image: String
   products: [Product]
   title: String
@@ -81,7 +81,7 @@ type Product {
   categoryHandle: String
   description: String
   handle: String
-  id: String!
+  id: String
   image: ProductImage
   price: Float
   title: String

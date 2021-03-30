@@ -8,7 +8,7 @@ import { ListWrapper, ListItemWrapper } from "./FooterMobileDrawLinksStyle";
 import { Button, Dropdown } from "../../../utils";
 import SignOutButton from "../../../Signin/SignOutButton";
 import LoginButton from "../../../Signin/LoginButton";
-import { ALTERATIONS, REPAIRS, SHOP } from "../../../../constants/categories";
+import { FPS, GRAPH, RTS } from "../../../../constants/categories";
 import * as ROUTES from "../../../../constants/routes";
 import useCustomer from "../../../../frontend-structure/user/hooks/useCustomer";
 import { NexusGenObjects } from "../../../../generated/nexus-typegen";
@@ -38,27 +38,27 @@ const FooterMobileDrawLinks = () => {
           </a>
         </Link>
       </ListItemWrapper>
-      <ListItemWrapper active={isActiveLink(REPAIRS.SLUG)}>
-        <Link href={ROUTES.SHOPCATEGORY} as={REPAIRS.SLUG}>
+      <ListItemWrapper active={isActiveLink(FPS.SLUG)}>
+        <Link href={ROUTES.SHOPCATEGORY} as={FPS.SLUG}>
           <a className="navLink">
-            <i className={`socialIcons ${REPAIRS.ICONCLASS}`} />
-            {REPAIRS.TITLE}
+            <i className={`socialIcons ${FPS.ICONCLASS}`} />
+            {FPS.TITLE}
           </a>
         </Link>
       </ListItemWrapper>
-      <ListItemWrapper active={isActiveLink(ALTERATIONS.SLUG)}>
-        <Link href={ROUTES.SHOPCATEGORY} as={ALTERATIONS.SLUG}>
+      <ListItemWrapper active={isActiveLink(GRAPH.SLUG)}>
+        <Link href={ROUTES.SHOPCATEGORY} as={GRAPH.SLUG}>
           <a className="navLink">
-            <i className={`socialIcons ${ALTERATIONS.ICONCLASS}`} />
-            {ALTERATIONS.TITLE}
+            <i className={`socialIcons ${GRAPH.ICONCLASS}`} />
+            {GRAPH.TITLE}
           </a>
         </Link>
       </ListItemWrapper>
-      <ListItemWrapper active={isActiveLink(SHOP.SLUG)}>
-        <Link href={ROUTES.SHOPCATEGORY} as={SHOP.SLUG}>
+      <ListItemWrapper active={isActiveLink(RTS.SLUG)}>
+        <Link href={ROUTES.SHOPCATEGORY} as={RTS.SLUG}>
           <a className="navLink">
-            <i className={`socialIcons ${SHOP.ICONCLASS}`} />
-            {SHOP.TITLE}
+            <i className={`socialIcons ${RTS.ICONCLASS}`} />
+            {RTS.TITLE}
           </a>
         </Link>
       </ListItemWrapper>

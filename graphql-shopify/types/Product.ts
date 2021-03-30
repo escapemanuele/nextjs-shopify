@@ -36,7 +36,7 @@ export const ProductQuery = extendType({
 export const Product = objectType({
     name: 'Product',
     definition(t) {
-        t.model.id();
+        t.string('id');
         t.string('title');
         t.field('image', {
             type: 'ProductImage'

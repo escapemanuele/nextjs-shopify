@@ -15,7 +15,7 @@ import LoginButton from "../../Signin/LoginButton";
 import SignOutButton from "../../Signin/SignOutButton";
 import CartButton from "../../Cart/CartButton";
 import * as ROUTES from "../../../constants/routes";
-import { ALTERATIONS, REPAIRS, SHOP } from "../../../constants/categories";
+import { FPS, GRAPH, RTS } from "../../../constants/categories";
 
 import { ListWrapper, ListItemWrapper } from "./HeaderLinksStyle";
 import useCustomer from "../../../frontend-structure/user/hooks/useCustomer";
@@ -30,8 +30,8 @@ function HeaderLinks() {
 
   return (
     <ListWrapper>
-      <ListItemWrapper active={isActiveLink(REPAIRS.SLUG)}>
-        <Link href={ROUTES.SHOPCATEGORY} as={REPAIRS.SLUG}>
+      <ListItemWrapper active={isActiveLink(FPS.SLUG)}>
+        <Link href={ROUTES.SHOPCATEGORY} as={FPS.SLUG}>
           <a className="navLink">
             <Tooltip
               id="repair-tooltip"
@@ -39,40 +39,40 @@ function HeaderLinks() {
               placement="bottom"
             >
               <span>
-                <i className={`socialIcons ${REPAIRS.ICONCLASS}`} />
-                {REPAIRS.TITLE}
+                <i className={`socialIcons ${FPS.ICONCLASS}`} />
+                {FPS.TITLE}
               </span>
             </Tooltip>
           </a>
         </Link>
       </ListItemWrapper>
-      <ListItemWrapper active={isActiveLink(ALTERATIONS.SLUG)}>
-        <Link href={ROUTES.SHOPCATEGORY} as={ALTERATIONS.SLUG}>
+      <ListItemWrapper active={isActiveLink(GRAPH.SLUG)}>
+        <Link href={ROUTES.SHOPCATEGORY} as={GRAPH.SLUG}>
           <a className="navLink">
             <Tooltip
               id="alterations-tooltip"
-              title="Modifica e rinnova!"
+              title="Alter and change it!"
               placement="bottom"
             >
               <span>
-                <i className={`socialIcons ${ALTERATIONS.ICONCLASS}`} />
-                {ALTERATIONS.TITLE}
+                <i className={`socialIcons ${GRAPH.ICONCLASS}`} />
+                {GRAPH.TITLE}
               </span>
             </Tooltip>
           </a>
         </Link>
       </ListItemWrapper>
-      <ListItemWrapper active={isActiveLink(SHOP.SLUG)}>
-        <Link href={ROUTES.SHOPCATEGORY} as={SHOP.SLUG}>
+      <ListItemWrapper active={isActiveLink(RTS.SLUG)}>
+        <Link href={ROUTES.SHOPCATEGORY} as={RTS.SLUG}>
           <a className="navLink">
             <Tooltip
               id="shop-tooltip"
-              title="Visita il negozio"
+              title="Visit the Shop"
               placement="bottom"
             >
               <span>
-                <i className={`socialIcons ${SHOP.ICONCLASS}`} />
-                {SHOP.TITLE}
+                <i className={`socialIcons ${RTS.ICONCLASS}`} />
+                {RTS.TITLE}
               </span>
             </Tooltip>
           </a>
@@ -83,7 +83,7 @@ function HeaderLinks() {
           caret
           noLiPadding
           navDropdown
-          buttonText="Informazioni"
+          buttonText="Info"
           buttonProps={{
             className: "navLink",
             color: "transparent",
@@ -105,13 +105,13 @@ function HeaderLinks() {
       <ListItemWrapper>
         <Tooltip
           id="instagram-tooltip"
-          title="Seguici su Instagram :)"
+          title="Follow us on Instagram :)"
           placement="bottom"
         >
           <span>
             <Button
               color="transparent"
-              href="https://www.instagram.com/la.moscanera/"
+              href="https://www.instagram.com/"
               target="_blank"
               className="navLink"
             >
@@ -121,11 +121,7 @@ function HeaderLinks() {
         </Tooltip>
       </ListItemWrapper>
       <ListItemWrapper>
-        <Tooltip
-          id="cart-tooltip"
-          title="Vai al tuo carrello"
-          placement="bottom"
-        >
+        <Tooltip id="cart-tooltip" title="Cart" placement="bottom">
           <span>
             <CartButton color="transparent" className="navLink" />
           </span>

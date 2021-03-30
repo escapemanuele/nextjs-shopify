@@ -5,28 +5,28 @@ import {
   MainRaisedWrapper,
   ContainerWrapper,
   Header,
-  Parallax
+  Parallax,
 } from "../../utils";
-import HeaderLinks from '../Header/HeaderLinks';
-import HeaderMobileLinks from '../Header/HeaderMobileLinks';
+import HeaderLinks from "../Header/HeaderLinks";
+import HeaderMobileLinks from "../Header/HeaderMobileLinks";
 import Meta from "../Meta";
-import FooterContainer from '../Footer/FooterContainer';
+import FooterContainer from "../Footer/FooterContainer";
 
-const PageLayout = props => (
+const PageLayout = (props) => (
   <StyledPage>
     <Header
-      brand="La Mosca Nera"
+      brand="Escapemanuele Store"
       rightLinks={<HeaderLinks />}
       mobileLinks={<HeaderMobileLinks />}
       fixed
       color="overylayBlack"
       changeColorOnScroll={{
-          height: 200,
-          color: 'white'
-        }}
+        height: 200,
+        color: "white",
+      }}
       changeBrandOnScroll={{
-          height: 160
-        }}
+        height: 160,
+      }}
     />
     <Meta />
     <div>

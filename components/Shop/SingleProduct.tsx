@@ -35,7 +35,7 @@ const SingleProduct: React.FC<ItemProp> = ({ product }) => {
   return (
     <>
       <Head>
-        <title>{title} | La Mosca Nera</title>
+        <title>{title} | Shopify Store</title>
       </Head>
 
       <Button

@@ -11,7 +11,7 @@ const Meta = () => (
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
     />
-    <title>La Mosca Nera</title>
+    <title>@escapemanuele Shopify Store</title>
   </Head>
 );
 
