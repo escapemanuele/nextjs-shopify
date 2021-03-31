@@ -29,7 +29,6 @@ const AddressListItem = ({
 
   const handleChooseAddress = () => {
     const { __typename, active, ...addressWithoutTypename } = address;
-    console.log("addressWithoutTypename", addressWithoutTypename);
     setAddressChosen(addressWithoutTypename);
   };
 
