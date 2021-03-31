@@ -3,6 +3,7 @@ import { Checkout, CheckoutLineItemEdge, CollectionConnection, Collection } from
 
 
 export function normalizeCart(checkout: Checkout): CartCheckout {
+    console.log("CHECKOUT", checkout)
     return {
         id: checkout.id,
         customerId: '',

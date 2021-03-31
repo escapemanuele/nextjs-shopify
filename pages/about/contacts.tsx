@@ -8,22 +8,22 @@ const Contacts = () => {
   return (
     <>
       <Head>
-        <title>Contatti | La Mosca Nera</title>
+        <title>Contacts | @escapemanuele shop</title>
       </Head>
-      <PageTitle>Contattami</PageTitle>
-      <PageSubtitle>
+      <PageTitle>Contact me</PageTitle>
+      {/* <PageSubtitle>
         Sentiti libero di contattarmi con il mezzo che più preferisci, senza
         assolutamente nessun impegno!
-      </PageSubtitle>
+      </PageSubtitle> */}
       <ContactsButtons />
-      <ContactMap />
+      {/* <ContactMap /> */}
     </>
   );
 };
 
 export async function getStaticProps(context) {
   return {
-    props: {} // will be passed to the page component as props
+    props: {}, // will be passed to the page component as props
   };
 }
 

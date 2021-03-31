@@ -46,34 +46,36 @@ export const CheckoutQuery = extendType({
             type: 'Cart',
             async resolve(_, args, ctx) {
                 let checkout: Checkout
-                let cartItems: Array<NexusGenObjects["CartItem"]>
+                let cartItems: Array<NexusGenObjects["CartItem"]> = []
 
                 try {
                     let checkoutId = await getCheckoutId(ctx)
+
                     if (checkoutId) {
                         const data = await ctx.shopifyGraphql.request(QUERY_GET_CHECKOUT, { checkoutId: checkoutId })
                         checkout = data.node
                     }
-
-                    if (checkout?.completedAt || !checkoutId) {
+                    if (!checkout || checkout?.completedAt || !checkoutId) {
                         checkout = await checkoutCreate(ctx)
                     }
                     const cart: CartCheckout = transfromCheckoutToCart(checkout)
+                    if (cart && cart.lineItems) {
+                        cartItems = cart.lineItems.map(lineItem => {
+                            return {
+                                id: lineItem.id,
+                                title: lineItem.name,
+                                description: lineItem.variant?.description,
+                                handle: lineItem.handle,
+                                categoryHandle: lineItem.categoryHandle,
+                                quantity: lineItem.quantity,
+                                quantityAvailable: lineItem.variant.quantityAvailable,
+                                image: lineItem.variant.image?.url,
+                                price: lineItem.variant.price,
+                                note: lineItem.note
+                            }
+                        })
+                    }
 
-                    cartItems = cart.lineItems.map(lineItem => {
-                        return {
-                            id: lineItem.id,
-                            title: lineItem.name,
-                            description: lineItem.variant?.description,
-                            handle: lineItem.handle,
-                            categoryHandle: lineItem.categoryHandle,
-                            quantity: lineItem.quantity,
-                            quantityAvailable: lineItem.variant.quantityAvailable,
-                            image: lineItem.variant.image?.url,
-                            price: lineItem.variant.price,
-                            note: lineItem.note
-                        }
-                    })
 
                 } catch (err) {
                     console.error("Errore nel recupero dell'utente", err)

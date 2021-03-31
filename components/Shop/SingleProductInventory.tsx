@@ -13,20 +13,20 @@ const SingleProductInventory: React.FC<SingleProductInventoryType> = ({
   quantity,
 }) => {
   if (!availableForSale) {
-    return <InventoryLowWrapper>Non disponibile!</InventoryLowWrapper>;
+    return <InventoryLowWrapper>Not Available!</InventoryLowWrapper>;
   } else if (quantity > 0) {
-    const remaining = quantity === 1 ? "rimanente" : "rimanenti";
+    const remaining = quantity === 1 ? "remaining" : "remaining";
 
     if (quantity < 5) {
       return (
         <InventoryLowWrapper>
-          Solo {quantity} {remaining}
+          Only {quantity} {remaining}
         </InventoryLowWrapper>
       );
     }
-  } else {
-    return <></>;
   }
+
+  return <></>;
 };
 
 const InventoryStyle = css`

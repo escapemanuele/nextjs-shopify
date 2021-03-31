@@ -51,7 +51,7 @@ const RemoveFromCart: React.FC<{ cartItemId: string }> = ({ cartItemId }) => {
       aria-busy={loading}
       onClick={handleRemove}
     >
-      Rimuovi
+      Remove
     </Button>
   );
 };

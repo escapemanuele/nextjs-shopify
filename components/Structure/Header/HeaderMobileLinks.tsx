@@ -17,7 +17,7 @@ function HeaderMobileLinks() {
         <Link href={ROUTES.SHOPCATEGORY} as={FPS.SLUG}>
           <a className="navLink">
             {/* <i className={`socialIcons ${REPAIRS.ICONCLASS}`} /> */}
-            {FPS.TITLE}
+            {FPS.CODE}
           </a>
         </Link>
       </ListItemWrapper>
@@ -25,7 +25,7 @@ function HeaderMobileLinks() {
         <Link href={ROUTES.SHOPCATEGORY} as={GRAPH.SLUG}>
           <a className="navLink">
             {/* <i className={`socialIcons ${ALTERATIONS.ICONCLASS}`} /> */}
-            {GRAPH.TITLE}
+            {GRAPH.CODE}
           </a>
         </Link>
       </ListItemWrapper>
@@ -33,7 +33,7 @@ function HeaderMobileLinks() {
         <Link href={ROUTES.SHOPCATEGORY} as={RTS.SLUG}>
           <a className="navLink">
             {/* <i className={`socialIcons ${SHOP.ICONCLASS}`} /> */}
-            {RTS.TITLE}
+            {RTS.CODE}
           </a>
         </Link>
       </ListItemWrapper>

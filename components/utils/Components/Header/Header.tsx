@@ -10,10 +10,6 @@ import PropTypes from "prop-types";
 import Hidden from "@material-ui/core/Hidden";
 import Button from "../Button/Button";
 
-// @material-ui/icons
-// core components
-// import Cart from '../../../Cart/Cart';
-
 import { ToolbarWrapper, AppBarWrapper } from "./HeaderStyles";
 
 export default function Header(props) {
@@ -109,7 +105,7 @@ Router.events.on("routeChangeError", () => {
 });
 
 Header.defaultProp = {
-  color: "white"
+  color: "white",
 };
 
 Header.propTypes = {
@@ -121,7 +117,7 @@ Header.propTypes = {
     "transparent",
     "overylayBlack",
     "white",
-    "dark"
+    "dark",
   ]),
   rightLinks: PropTypes.node,
   mobileLinks: PropTypes.node,
@@ -145,11 +141,11 @@ Header.propTypes = {
       "transparent",
       "overylayBlack",
       "white",
-      "dark"
-    ]).isRequired
+      "dark",
+    ]).isRequired,
   }),
   // this will cause the sidebar to change from brand to logo
   changeBrandOnScroll: PropTypes.shape({
-    height: PropTypes.number.isRequired
-  })
+    height: PropTypes.number.isRequired,
+  }),
 };

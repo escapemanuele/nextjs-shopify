@@ -1,5 +1,4 @@
 import React from "react";
-import { useQuery } from "react-apollo";
 import styled from "styled-components";
 import Head from "next/head";
 
@@ -15,7 +14,7 @@ const CartPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Carrello | La Mosca Nera</title>
+        <title>Cart | @escapemanuele shop</title>
       </Head>
       {(() => {
         if (!data) {
@@ -33,10 +32,10 @@ const CartPage: React.FC = () => {
         return (
           <>
             <PageTitle>
-              Carrello (
+              Cart (
               {data?.cart?.cartItems
                 ? calcTotalItems(data?.cart.cartItems)
-                : "0 articoli"}
+                : "0 items"}
               )
             </PageTitle>
             <CartPageWrapper>

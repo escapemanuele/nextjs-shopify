@@ -6,6 +6,7 @@ import { normalizeCart } from "./normalize"
 const transfromCheckoutToCart = (checkout?: Maybe<Checkout>): CartCheckout => {
     if (!checkout) {
         //TODO: Throw new error
+        return;
     }
 
     return normalizeCart(checkout)

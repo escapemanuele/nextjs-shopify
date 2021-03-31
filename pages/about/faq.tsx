@@ -10,16 +10,16 @@ const Faq = () => {
   const [question, setQuestion] = useState(null);
 
   useEffect(() => {
-    const quest = QUESTIONS.find(x => x.type === faqSection);
+    const quest = QUESTIONS.find((x) => x.type === faqSection);
     setQuestion(quest);
   }, [faqSection]);
 
   return (
     <>
       <Head>
-        <title>FAQ | La Mosca Nera</title>
+        <title>FAQ | @escapemanuele store</title>
       </Head>
-      <PageTitle>Domande più frequenti</PageTitle>
+      <PageTitle>FAQ</PageTitle>
       <Sections
         sections={FAQSECTIONS}
         setSection={setFaqSection}
@@ -33,7 +33,7 @@ const Faq = () => {
 
 export async function getStaticProps(context) {
   return {
-    props: {} // will be passed to the page component as props
+    props: {}, // will be passed to the page component as props
   };
 }
 

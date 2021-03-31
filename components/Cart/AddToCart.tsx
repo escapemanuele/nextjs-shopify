@@ -49,7 +49,7 @@ const AddToCart = ({ id, note, maxQuantity }) => {
         onClick={handleAddToCart}
         className="addButton"
       >
-        <Favorite /* className={classes.icons} */ /> Aggiungi al carrello
+        <Favorite /* className={classes.icons} */ /> Add to cart
       </Button>
     </AddToCartWrapper>
   );

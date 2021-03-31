@@ -6,29 +6,29 @@ import { bool } from "prop-types";
 const HowItWorksOnline = () => {
   return (
     <HowItWorksWrapper>
-      <PageTitle>Come funziona l'ecommerce?</PageTitle>
+      <PageTitle>How does the ecommerce work?</PageTitle>
       <Carousel white={true} /*className="presentation-mode"*/>
         <CarouselItem
           image="/images/shop.png"
-          title="Acquista i servizi che ti servono"
-          subtitle="Che siano riparazioni, modifiche o magari qualcosa dal negozio!"
+          title="Buy what you need"
+          subtitle="Eeeeverything that you need!"
           animation={styles.animations.rotate}
           animationDuration="4s infinite"
         />
-        <CarouselItem
+        {/* <CarouselItem
           image="/images/package.png"
           title="Inviami i tuoi capi in laboratorio"
           subtitle="Metti i vestiti in un pacco e prenota il ritiro da parte del corriere"
           animation={styles.animations.pulse}
-        />
+        /> */}
         <CarouselItem
           image="/images/sarta.png"
-          title="I tuoi abiti saranno trattati con cura e riportati a nuova vita!"
+          title="I will work on your order"
           animation={styles.animations.pulse}
         />
         <CarouselItem
           image="/images/consegna-gratuita.png"
-          title="Ricevi a casa i tuoi vestiti come nuovi!"
+          title="You will receive the package as soon as possible!"
         />
       </Carousel>
     </HowItWorksWrapper>

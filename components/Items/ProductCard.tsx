@@ -5,6 +5,7 @@ import { styles, formatMoney, BouncingLoader } from "../utils";
 import { ITEM } from "../../constants/routes";
 import { NexusGenObjects } from "../../generated/nexus-typegen";
 import useProductAvailability from "../../frontend-structure/product/hooks/useProductAvailability";
+import { truncateString } from "../utils/lib/stringUtils";
 
 interface ProductCardProp {
   product: NexusGenObjects["Product"];
@@ -37,7 +38,7 @@ const ProductCard = ({ product }: ProductCardProp) => {
             <h6>{formatMoney(product.price)}</h6>
             <ProductInventory availability={data} />
           </div>
-          <div>{product.description}</div>
+          <div>{truncateString(product.description, 120)}</div>
         </div>
       </ItemWrapper>
     </Link>
@@ -53,12 +54,12 @@ const ProductInventory = ({ availability }: ProductInventoryProp) => {
 
   if (availability) {
     if (!availability.availableForSale) {
-      content = <div>Non disponibile</div>;
+      content = <div>Not Available</div>;
     } else if (availability.totalInventory === 0) {
       //Product without inventory
       content = <div />;
     } else if (availability.totalInventory < 4) {
-      content = <div>Solo {availability.totalInventory} rimasti</div>;
+      content = <div>Only {availability.totalInventory} remaining</div>;
     } else {
       content = <div />;
     }

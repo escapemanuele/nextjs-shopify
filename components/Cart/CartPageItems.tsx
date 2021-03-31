@@ -7,6 +7,7 @@ import RemoveFromCart from "./RemoveFromCart";
 import UpdateCartQuantity from "./UpdateCartQuantity";
 import { ITEM } from "../../constants/routes";
 import { NexusGenObjects } from "../../generated/nexus-typegen";
+import { truncateString } from "../utils/lib/stringUtils";
 
 const CartPageItems: React.FC<{
   cartItems: Array<NexusGenObjects["CartItem"]>;
@@ -21,13 +22,9 @@ const CartPageItems: React.FC<{
 const CartPageItem: React.FC<{ cartItem: NexusGenObjects["CartItem"] }> = ({
   cartItem,
 }) => {
-  if (!cartItem) return <p>Elemento non più presente!</p>;
+  if (!cartItem) return <p>Product no longer in stock!</p>;
 
   let maxQuantity = cartItem.quantityAvailable;
-  // If the item has an inventory, I have to check the max quantity ordinable
-  // if (cartItem.item.shopItem) {
-  //   maxQuantity = cartItem.item.shopItem.quantity;
-  // }
 
   return (
     <li>
@@ -45,7 +42,7 @@ const CartPageItem: React.FC<{ cartItem: NexusGenObjects["CartItem"] }> = ({
             <a>{cartItem.title}</a>
           </Link>
           <div className="cartitem-title-description">
-            {cartItem.description}
+            {truncateString(cartItem.description, 160)}
           </div>
           <div className="cartitem-title-quantity">
             <UpdateCartQuantity

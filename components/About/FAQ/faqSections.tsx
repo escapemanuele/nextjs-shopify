@@ -5,64 +5,64 @@ export default [
   {
     icon: null,
     iconClass: "fas fa-cut",
-    title: "Riparazioni",
-    link: "Repairs"
+    title: "Repairs",
+    link: "Repairs",
   },
   {
     icon: <FaTruck />,
-    title: "Spedizioni",
-    link: "Spedition"
+    title: "Shipping",
+    link: "Shipping",
   },
   {
     icon: <FaMapMarkedAlt />,
-    title: "Pagamenti",
-    link: "Payment"
-  }
+    title: "Payments",
+    link: "Payment",
+  },
 ];
 
 export const QUESTIONS = [
   {
     type: "Repairs",
-    title: "Domande sulle riparazioni",
+    title: "Questions about things",
     questions: [
       {
         question: "How much does shipping cost?",
         answer:
-          "Shipping is free in the United States, $30 flat rate per order elsewhere. For deliveries outside of the US, additional import duties may be applied upon receipt of your order."
+          "Shipping is free in the United States, $30 flat rate per order elsewhere. For deliveries outside of the US, additional import duties may be applied upon receipt of your order.",
       },
       {
-        question: "Why are u ghey?",
-        answer: "Because I eat a lot of carrots"
-      }
-    ]
+        question: "Why ...?",
+        answer: "Because I eat a lot of carrots",
+      },
+    ],
   },
   {
-    type: "Spedition",
-    title: "Domande sulle spedizioni",
+    type: "Shipping",
+    title: "Questions about shipping",
     questions: [
       {
         question: "How much does shipping cost?",
         answer:
-          "Shipping is free in the United States, $30 flat rate per order elsewhere. For deliveries outside of the US, additional import duties may be applied upon receipt of your order."
+          "Shipping is free in the United States, $30 flat rate per order elsewhere. For deliveries outside of the US, additional import duties may be applied upon receipt of your order.",
       },
       {
-        question: "Why are u ghey?",
-        answer: "Because I eat a lot of carrots"
-      }
-    ]
+        question: "Why ...?",
+        answer: "Because I eat a lot of carrots",
+      },
+    ],
   },
   {
     type: "Payment",
-    title: "Domande sui pagamenti",
+    title: "Questions about payments",
     questions: [
       {
         question: "What currency are your prices listed in?",
-        answer: "All of our prices are in Euro (EUR)."
+        answer: "All of our prices are in Euro (EUR).",
       },
       {
-        question: "Why are u ghey?",
-        answer: "Because I eat a lot of carrots"
-      }
-    ]
-  }
+        question: "Why ...?",
+        answer: "Because I eat a lot of carrots",
+      },
+    ],
+  },
 ];

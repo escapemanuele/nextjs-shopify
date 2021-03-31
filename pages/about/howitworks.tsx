@@ -8,24 +8,19 @@ const HowItWorks = () => {
   return (
     <>
       <Head>
-        <title>Come funziona | La Mosca Nera</title>
+        <title>How it works | @escapemanuele Store </title>
       </Head>
-      <IntroductionWrapper>
-        Nel mio laboratorio effettuo{" "}
-        <strong>riparazioni di quasi ogni tipo</strong> (per l’impossibile mi
-        sto attrezzando) per i tuoi capi d’abbigliamento, dando così loro una
-        seconda possibilità di mettersi in mostra.
-      </IntroductionWrapper>
+      <IntroductionWrapper>Explanation...</IntroductionWrapper>
 
       <HowItWorksOnline />
-      <HowItWorksOffline />
+      {/* <HowItWorksOffline /> */}
     </>
   );
 };
 
 export async function getStaticProps(context) {
   return {
-    props: {} // will be passed to the page component as props
+    props: {}, // will be passed to the page component as props
   };
 }
 

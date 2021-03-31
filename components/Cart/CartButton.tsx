@@ -6,9 +6,11 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import Link from "next/link";
 import { CART } from "../../constants/routes";
 import QUERY_GET_CART from "../../frontend-structure/checkout/queries/QUERY_GET_CART";
+import useCart from "../../frontend-structure/checkout/hooks/useCart";
 
 const CartButton = (props) => {
-  const { data, loading } = useQuery(QUERY_GET_CART);
+  const [data, loading] = useCart();
+  // const { data, loading } = useQuery(QUERY_GET_CART);
 
   const getCartItems = (cartItems) =>
     cartItems.reduce((sum, cartItem) => sum + cartItem.quantity, 0);

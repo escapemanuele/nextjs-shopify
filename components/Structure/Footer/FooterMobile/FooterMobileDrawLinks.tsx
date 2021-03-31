@@ -67,7 +67,7 @@ const FooterMobileDrawLinks = () => {
           caret
           noLiPadding
           navDropdown
-          buttonText="Informazioni"
+          buttonText="Info"
           buttonProps={{
             className: "navLink",
             color: "transparent",
@@ -75,13 +75,13 @@ const FooterMobileDrawLinks = () => {
           buttonIcon={HelpOutlineIcon}
           dropdownList={[
             <Link href={ROUTES.HOWITWORKS}>
-              <a className="dropdownLink">Come funziona</a>
+              <a className="dropdownLink">How</a>
             </Link>,
             <Link href={ROUTES.FAQ}>
               <a className="dropdownLink">FAQ</a>
             </Link>,
             <Link href={ROUTES.CONTACTS}>
-              <a className="dropdownLink">Contatti</a>
+              <a className="dropdownLink">Contacts</a>
             </Link>,
           ]}
         />

@@ -11,8 +11,6 @@ interface FrontCategoryProp {
 }
 
 const FrontCategory: React.FC<FrontCategoryProp> = ({ category }) => {
-  console.log("CATEGORY", category);
-
   return (
     <Link href={SHOPCATEGORY} as={category.handle}>
       <FrontCategoryWrapper>

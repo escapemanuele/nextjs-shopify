@@ -25,9 +25,6 @@ const Home = ({
   products,
   categories,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  console.log("PRODUCTRS", products);
-  console.log("categories", categories);
-
   return (
     <>
       <Parallax image="/images/fantasy-land.jpg">
