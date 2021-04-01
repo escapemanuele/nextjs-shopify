@@ -2,6 +2,8 @@
   A simple NextJS integration with Shopify: https://nextjs-shopify-omega.vercel.app/
 </h1>
 
+![Shopify Shop Frontpage](./media/frontpage.png)
+
 ## Features
 
 - NextJS
@@ -33,14 +35,14 @@
     cd your-project-name
     npm install
     ```
-    
+
 3.  **Required Environmental Variables**
 
     COOKIE_CRYPT=a-complex-enough-crypt-key
     SHOPIFY_GRAPHQL_ENDPOINT=https://your-shop-name.myshopify.com/api/latest-graphql-version/graphql.json
     STOREFRONT_ACCESS_TOKEN=...(retrieve it from shopify)
     LOCAL_API_GRAPHQL_ENDPOINT=your-url/api/graphql (localhost:PORT/api/graphql in env.development)
-    
+
 4.  **Start developing.**
 
     Finally you are ready to see your project. Start the engine!
