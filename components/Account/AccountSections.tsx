@@ -6,15 +6,15 @@ import AddressesPage from "./Addresses/AddressesPage";
 export default [
   {
     icon: <FaTruck />,
-    title: "Ordini",
-    description: "Visualizza gli ordini effettuati",
+    title: "Orders",
+    description: "Show past orders",
     link: "orders",
     component: <OrdersPage />,
   },
   {
     icon: <FaMapMarkedAlt />,
-    title: "Indirizzi",
-    description: "Modifica i tuoi indirizzi di consegna",
+    title: "Shipping addresses",
+    description: "Edit your shipping addresses",
     link: "addresses",
     component: <AddressesPage />,
   },

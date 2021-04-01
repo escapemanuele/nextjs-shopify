@@ -29,7 +29,7 @@ const SignOutButton: React.FC<SignoutButtonType> = (props) => {
 
   return (
     <Button disabled={loading} internal onClick={handleSignout} {...props}>
-      SCOLLEGATI
+      Logout
     </Button>
     // <a onClick={handleSignout}>SCOLLEGATI</a>
   );

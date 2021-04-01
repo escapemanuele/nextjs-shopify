@@ -7,7 +7,7 @@ import { Button, styles } from "../utils";
 const SingleProductNote = ({ note, setNote }) => {
   const [showText, setShowText] = useState(false);
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     if (e && e.target) {
       setNote(e.target.value);
     }
@@ -23,12 +23,12 @@ const SingleProductNote = ({ note, setNote }) => {
           multiline
           rows="4"
           fullWidth
-          onChange={e => handleChange(e)}
+          onChange={(e) => handleChange(e)}
           value={note}
           variant="outlined"
         />
       ) : (
-        <Button onClick={() => setShowText(true)}>Aggiungi nota</Button>
+        <Button onClick={() => setShowText(true)}>Add note</Button>
       )}
     </NoteWrapper>
   );
@@ -36,11 +36,11 @@ const SingleProductNote = ({ note, setNote }) => {
 
 SingleProductNote.propTypes = {
   note: PropTypes.string,
-  setNote: PropTypes.func.isRequired
+  setNote: PropTypes.func.isRequired,
 };
 
 SingleProductNote.defaultProps = {
-  note: ""
+  note: "",
 };
 
 const NoteWrapper = styled.div`

@@ -20,9 +20,9 @@ const AccountPage = () => {
   return (
     <>
       <Head>
-        <title>Account | La Mosca Nera</title>
+        <title>Account | @escapemanuele shop</title>
       </Head>
-      <PageTitle>Il mio account</PageTitle>
+      <PageTitle>My account</PageTitle>
       {user && (
         <>
           <Sections

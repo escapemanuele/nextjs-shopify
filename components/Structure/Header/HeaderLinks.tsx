@@ -149,7 +149,7 @@ const HeaderAuth = ({ user }: { user: NexusGenObjects["User"] }) => {
         buttonIcon={AccountCircle}
         dropdownList={[
           <Link href={ROUTES.ACCOUNT}>
-            <a className="dropdownLink">Il mio account</a>
+            <a className="dropdownLink">My account</a>
           </Link>,
           <SignOutButton className="dropdownLink" />,
         ]}

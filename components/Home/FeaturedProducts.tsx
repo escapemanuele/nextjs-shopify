@@ -10,7 +10,7 @@ interface FeaturedProductsProp {
 const FeaturedProducts: React.FC<FeaturedProductsProp> = ({ products }) => {
   return (
     <div>
-      <Title title="prodotti" subtitle="più cercati" />
+      <Title title="top" subtitle="products" />
       {products && <ItemsList products={products} />}
     </div>
   );

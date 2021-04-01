@@ -11,16 +11,16 @@ interface CartPaymentProp {
 
 const CartPayment = ({ cartItems }: CartPaymentProp) => (
   <CartPaymentWrapper>
-    <h3>Totale</h3>
+    <h3>Total</h3>
     <TotalLine
-      title="Totale articolo/i:"
+      title="Total for article:"
       price={formatMoney(calcTotalPrice(cartItems))}
     />
     <hr />
-    <TotalLine title="Spedizioni" titleBold priceSuccess price="GRATIS" />
+    <TotalLine title="Shipment" titleBold priceSuccess price="GRATIS" />
     {cartItems.length && (
       <Button fullWidth size="lg" color="success" href={CHECKOUT} internal>
-        Procedi all'acquisto
+        Continue to checkout
       </Button>
     )}
   </CartPaymentWrapper>
