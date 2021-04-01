@@ -10,11 +10,11 @@ const TotalSummary = ({ me, children }) => {
   return (
     <CartPaymentWrapper>
       <h3>Ordine</h3>
-      <TotalLine title="Articolo/i:" price={formatMoney(totalPrice)} />
-      <TotalLine title="Spedizioni" titleBold priceSuccess price="GRATIS" />
+      <TotalLine title="Articles:" price={formatMoney(totalPrice)} />
+      <TotalLine title="Shipments" titleBold priceSuccess price="GRATIS" />
       <hr />
       <TotalLine
-        title="Totale"
+        title="Total"
         titleBold
         priceSuccess
         price={formatMoney(totalPrice)}

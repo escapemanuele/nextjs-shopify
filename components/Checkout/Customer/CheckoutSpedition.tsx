@@ -12,7 +12,7 @@ const CheckoutSpedition = () => {
 
   return (
     <CheckoutSpeditionWrapper>
-      <PageTitle>Seleziona il tuo indirizzo</PageTitle>
+      <PageTitle>Select your address</PageTitle>
       <div className="addressList">
         {/* <Button
           color="primary"
@@ -28,7 +28,7 @@ const CheckoutSpedition = () => {
           width="60%"
           widthMobile="100%"
         >
-          Usa un nuovo indirizzo
+          Use a new address
         </Button>
         <AddressListItems />
       </div>

@@ -6,10 +6,8 @@ import { LOGIN } from "../../../constants/routes";
 
 const GuestWarning = () => (
   <GuestWarningWrapper>
-    Procedendo effettuerai l'acquisto come ospite, non potendo tenere traccia
-    dei tuoi ordini. <br />
-    Registrandoti invece potrai usufruire di <strong>buoni sconti</strong> e
-    tenere traccia di tutti i tuoi ordini.
+    You are checking out as a guest, so you will not be able to track your
+    orders!
     <br />
   </GuestWarningWrapper>
 );

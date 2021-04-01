@@ -61,7 +61,7 @@ const AddressListItem = ({
             color="primary"
             onClick={handleStepDone}
           >
-            Usa questo indirizzo
+            Use this address
           </Button>
           {/* <div>
             <Button color="transparent">Modifica</Button>

@@ -37,18 +37,18 @@ const CheckoutGuestSuggestLogin = () => {
 
   return (
     <>
-      <PageTitle>Non sappiamo ancora chi sei!</PageTitle>
+      <PageTitle>We don't know each other yet!</PageTitle>
       <WarningWrapper>
         <GuestWarning />
         <div className="warning-buttons">
           <Button color="primary" internal href={LOGIN}>
-            Accedi
+            Login
           </Button>
           <Button color="primary" internal href={LOGON}>
-            Registrati
+            Register
           </Button>
           <Button color="white" internal onClick={nextPage}>
-            Prosegui
+            Continue
           </Button>
         </div>
 
