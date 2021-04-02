@@ -1,5 +1,5 @@
 <h1 align="center">
-  A simple Demo e-commerce, built with NextJS and Shopify: https://nextjs-shopify-omega.vercel.app/
+  A simple demo e-commerce, built with NextJS and Shopify: https://nextjs-shopify-omega.vercel.app/
 </h1>
 
 ![Shopify Shop Frontpage](./media/frontpage.png)
